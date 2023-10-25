@@ -1,0 +1,25 @@
+{
+  "projectName": "testing-all-contributors-CI-checks",
+  "projectOwner": "jdwilkin4",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "jdwilkin4",
+      "name": "Jessica Wilkins ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67210629?v=4",
+      "profile": "https://jessicawilkins.dev/",
+      "contributions": [
+        "question"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
