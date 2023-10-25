@@ -1,0 +1,17 @@
+{
+  "name": "testing-all-contributors-ci-checks",
+  "version": "1.0.0",
+  "description": "This is a repo I created to test adding more CI checks for working with all contributors command",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "contributors:generate": "all-contributors generate",
+    "contributors:add": "all-contributors add"
+  },
+  "keywords": [],
+  "author": "Jessica Wilkins",
+  "license": "ISC",
+  "devDependencies": {
+    "all-contributors-cli": "^6.26.1"
+  }
+}
