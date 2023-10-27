@@ -18,6 +18,16 @@
       "contributions": [
         "question"
       ]
+    },
+    {
+      "login": "fakeUser",
+      "name": "Jane Doe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67210629?v=4",
+      "profile": "https://jessicawilkins.dev/",
+      "contributions": [
+        "invalid entry",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
