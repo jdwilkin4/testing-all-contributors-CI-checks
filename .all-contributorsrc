@@ -28,6 +28,17 @@
         "invalid entry",
         "question"
       ]
+    },
+    {
+      "login": "fakeUser2",
+      "name": "John Doe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67210629?v=4",
+      "profile": "https://jessicawilkins.dev/",
+      "contributions": [
+        "invalid entry",
+        "question",
+        "another invalid entry"
+      ]
     }
   ],
   "contributorsPerLine": 7,
