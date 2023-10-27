@@ -20,6 +20,7 @@ jobs:
         run: yarn install
 
       - name: Run validation script
+        id: validation
         run: node validate-contributors.js
         continue-on-error: true
 
