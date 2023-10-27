@@ -24,11 +24,11 @@ jobs:
         run: node validate-contributors.js
         continue-on-error: true
 
-      - name: Display message to users if validation fails
+      - name: Display message to contributor if validation fails
         if: steps.validation.outcome != 'success'
         run: |
           curl -X POST \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
-            -d '{"state": "failure", "description": "Validation check failed", "context": "Validation"}'
+            -d '{"body": "Validation check failed for contributions list. This list only accepts valid types that can be found in the documentation here: https://allcontributors.org/docs/en/emoji-key. If you need help resolving this error, please reply back in this PR and one of the maintainers will be happy to help you. :thumbsup:"}' \
+            https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments
