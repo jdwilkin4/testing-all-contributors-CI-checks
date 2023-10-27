@@ -1,0 +1,33 @@
+name: Validate Contribution Entries
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-contribution-entries:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.9.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run validation script
+        run: node validate-contributors.js
+        continue-on-error: true
+
+      - name: Display message to users if validation fails
+        if: steps.validation.outcome != 'success'
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+            -d '{"state": "failure", "description": "Validation check failed", "context": "Validation"}'
