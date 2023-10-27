@@ -18,6 +18,16 @@
       "contributions": [
         "question"
       ]
+    },
+    {
+      "login": "jdwilkin4",
+      "name": "Jessica Wilkins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67210629?v=4",
+      "profile": "https://jessicawilkins.dev/",
+      "contributions": [
+        "question",
+        "invalid entry"
+      ]
     }
   ],
   "contributorsPerLine": 7,
