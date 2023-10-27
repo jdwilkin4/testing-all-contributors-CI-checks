@@ -1,6 +1,6 @@
 name: Validate Contribution Entries
 on:
-  push:
+  pull_request:
     branches:
       - main
 
